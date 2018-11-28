@@ -1,0 +1,68 @@
+/* User Detail */
+.card {
+    position: relative;
+    width: 40%;
+    margin: 10% auto;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+  
+  .card img {
+    width: 60%;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container {
+    padding: 2px 16px;
+  }
+  
+  .go-back {
+      display: inline-block;
+      padding: 16px 32px;
+      margin: 4px 2px;
+      border: 2px solid #4CAF50;
+      font-size: 16px;
+      
+      text-align: center;
+      text-decoration: none;
+      background: white; 
+      color: black;
+      
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      cursor: pointer;
+  }
+  
+  .go-back:hover {
+    background: #4CAF50;
+    color: white;
+  }
+  
+  .btn-container{
+    text-align: center;
+  }
+  
+  .rounded-initials{
+      height: 30px;
+      width: 30px;
+      line-height: 2;
+      border-radius: 50%;
+      text-align: center;
+      font-weight: bold;
+      color: black;
+      background: #bbb;
+  }
+  
+  .header-list{
+      text-align: center;
+  }
+
+  ul > li {
+    list-style: none;
+  }

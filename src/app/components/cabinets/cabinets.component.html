@@ -1,0 +1,26 @@
+<h2>Cabinet List</h2>
+<button type="button" class="btn btn-info" [routerLink]="['/cabinet/new']">Add</button>
+<button type="button" class="btn btn-info" [routerLink]="['/devices']">Devices</button>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Width</th>
+            <th scope="col">Height</th>
+            <th scope="col">No. Devices</th>
+            <th scope="col">Details</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cabinet of cabinets">
+            <th scope="row">{{cabinet.id}}</th>
+            <td>{{cabinet.width}}</td>
+            <td>{{cabinet.height}}</td>
+            <td>{{cabinet.devices.length}}</td>
+            <td><button type="button" class="btn btn-success" [routerLink]="['/cabinet/detail', cabinet.id]">Details</button></td>
+            <td><button type="button" class="btn btn-danger" (click)="removeCabinet(cabinet.id)">Delete</button></td>
+        </tr>
+    </tbody>
+  </table>

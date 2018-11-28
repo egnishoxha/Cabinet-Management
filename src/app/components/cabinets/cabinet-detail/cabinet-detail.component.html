@@ -1,0 +1,21 @@
+<div *ngIf="cabinet">
+    <div class="card">
+        <h2>Cabinet Detail</h2>
+        <div class="container">
+            <h2><b>ID: {{cabinet.id}}</b></h2> 
+            <p>Width: {{cabinet.width}}</p>
+            <p>Height: {{cabinet.height}}</p> 
+            <p>No. Devices: {{cabinet.devices_no ? cabinet.devices_no: 0}}</p>
+            <p>Devices Details:</p>
+            <ul *ngIf="cabinet.devices.length">
+                <li *ngFor="let device of cabinet.devices">
+                    <span>ID: {{device.id}} - Width: {{device.width}} - Height: {{device.height}}</span>
+                </li>
+            </ul>
+            <p *ngIf="!cabinet.devices.length">N/A</p>
+        </div>
+    </div>
+    <p class="btn-container">
+        <button type="button" class="btn btn-success" [routerLink]="['/cabinets']">Go to List</button>
+    </p>
+</div>

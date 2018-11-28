@@ -1,0 +1,23 @@
+<h2>Devices List</h2>
+<button type="button" class="btn btn-info" [routerLink]="['/device/new']">Add</button>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Width</th>
+            <th scope="col">Height</th>
+            <th scope="col">Cabinet</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let device of devices">
+            <th scope="row">{{device.id}}</th>
+            <td>{{device.width}}</td>
+            <td>{{device.height}}</td>
+            <td>{{device.cabinetId}}</td>
+            <td><button type="button" class="btn btn-danger" (click)="removeDevice(device.id)">Delete</button></td>
+        </tr>
+    </tbody>
+  </table>

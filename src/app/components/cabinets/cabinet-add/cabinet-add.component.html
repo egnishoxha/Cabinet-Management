@@ -1,0 +1,29 @@
+<h2>Add Cabinet</h2>
+<form [formGroup]="cabinetForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="username">Width</label>
+        <input type="number" 
+               formControlName="cabWidth" 
+               class="form-control" 
+               [ngClass]="{ 'is-invalid': submitted && f.cabWidth.errors }" 
+        />
+        <div *ngIf="submitted && f.cabWidth.errors" class="invalid-feedback">
+            <div *ngIf="f.cabWidth.errors.required">Width is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+            <label for="cabHeight">Height</label>
+            <input type="number" 
+                   formControlName="cabHeight" 
+                   class="form-control" 
+                   [ngClass]="{ 'is-invalid': submitted && f.cabHeight.errors }" 
+            />
+            <div *ngIf="submitted && f.cabHeight.errors" class="invalid-feedback">
+                <div *ngIf="f.cabHeight.errors.required">Height is required</div>
+            </div>
+        </div>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">Save</button>
+        <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+    </div>
+</form>
